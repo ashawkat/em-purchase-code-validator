@@ -1,0 +1,90 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.em-verify-result {
+    border: 1px solid;
+    padding: 40px 30px;
+    margin-bottom: 20px;
+}
+
+.em-verify-result ul {
+    list-style: none;
+}
+
+.em-verify-result ul li {
+    display: block;
+    padding: 5px 0;
+}
+
+.em-verify-result ul li.em-float-right{
+    float: right;
+}
+
+#em-form form input, #em-form form label {
+    width: 300px;
+    display: block;
+}
+
+#em-form form input[type='text'] {
+    height: 50px;
+    font-weight: normal;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+#em-form form input[type='text']:focus{
+    border: 1px solid #eb1c24;
+}
+#em-form form input[type='submit'] {
+    width: 150px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    margin-right: 0;
+    font-weight: 600;
+    padding: 12px 25px;
+}
+
+#em-form form input[type='submit']:hover{ 
+    background-color: transparent;
+    color: #303030;
+}
+
+.em-message {
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.em-message p {
+    margin: 0;
+}
+
+.em-message.error {
+    border: 1px solid #eb1c24;
+}
+
+.em-message.success {
+    border: 1px solid #6FBF2C;
+}
+
+.em-verify-result.valid {
+    border-color: #6FBF2C;
+}
+
+li.em-float-right.valid {
+    color: #6FBF2C;
+}
+
+.em-verify-result.invalid {
+    border-color: #eb1c24;
+}
+
+li.em-float-right.invalid {
+    color: #eb1c24;
+}
