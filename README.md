@@ -6,9 +6,9 @@ Tags:              purchase code verify, envato market, envato verify, purchase 
 Author URI:        https://codeheavenbd.com  
 Author:            CodeHeaven  
 Requires at least: 4.9  
-Tested up to:      5.0.3  
-Stable tag:        1.0.0  
-Version:           1.0.0  
+Tested up to:      5.1
+Stable tag:        1.0.1
+Version:           1.0.1
 
 This is a simple plugin to validate your customer purchase code from Envato Market.
 

@@ -26,7 +26,7 @@ function create_empurchasecodeval_shortcode($atts) {
     ?>
     <div id="em-form" class="em-wrapper">
         <div class="em-form-wrapper">
-            <div class="em-verify-result" v-bind:class="{ valid: validClass, 'invalid': invalidClass }" v-if="responseDataEnabler">
+            <div v-cloak class="em-verify-result" v-bind:class="{ valid: validClass, 'invalid': invalidClass }" v-if="responseDataEnabler">
                 <ul v-for="data in responseData">
                     <li><strong><?php _e( 'Purchase Code', 'em-puchase-code-validator' ); ?>:</strong> {{ purchaseCode }}</li>
                     <li><strong><?php _e( 'Item Name', 'em-puchase-code-validator' ); ?>:</strong> {{ data.item_name }}</li>
@@ -46,7 +46,7 @@ function create_empurchasecodeval_shortcode($atts) {
                     <input type="submit" value="<?php _e( 'Validate', 'em-purchase-code-validator' ); ?>">
                 </div>
             </form>
-            <div class="em-message" v-if="responseMessageEnabler" class="static" v-bind:class="{ success: responseMessageSuccess, 'error': responseMessageError }">
+            <div  v-cloak class="em-message" v-if="responseMessageEnabler" class="static" v-bind:class="{ success: responseMessageSuccess, 'error': responseMessageError }">
                 <p>{{ responseMessage }}</p>
             </div>
         </div>

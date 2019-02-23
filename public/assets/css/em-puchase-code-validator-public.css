@@ -2,7 +2,9 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
-
+[ v-cloak] {
+    display: none;
+}
 .em-verify-result {
     border: 1px solid;
     padding: 40px 30px;
