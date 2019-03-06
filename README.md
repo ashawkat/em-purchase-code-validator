@@ -35,5 +35,11 @@ This is a simple plugin to validate your customer purchase code from Envato Mark
 
 == Changelog ==
 
+= 1.0.2 =
+* Fixed: issue with date in moment js fixed
+
+= 1.0.1 =
+* Fixed: Fixed showing the template before loading v component
+
 = 1.0.0 =
 * Initial release

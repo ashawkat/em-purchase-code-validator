@@ -15,12 +15,12 @@ new Vue({
     },
     methods: {
         getValidity : function ( supportDate ) {
-            if ( moment().format('MMMM Do YYYY') < supportDate ) {
-                this.validClass = true;
-                return 'Valid for support';
-            } else {
+            if ( moment(supportDate).isSame(moment(), 'day') ) {
                 this.invalidClass = true;
                 return 'Invalid for support';
+            } else {
+                this.validClass = true;
+                return 'Valid for support';
             }
         },
         getHumanDate : function ( date ) {
