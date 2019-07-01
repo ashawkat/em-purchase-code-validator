@@ -7,8 +7,8 @@ Author URI:        https://codeheavenbd.com
 Author:            CodeHeaven
 Requires at least: 4.9
 Tested up to:      5.1
-Stable tag:        1.0.2
-Version:           1.0.2
+Stable tag:        1.0.3
+Version:           1.0.3
 
 This is a simple plugin to validate your customer purchase code from Envato Market.
 
@@ -33,6 +33,9 @@ This is a simple plugin to validate your customer purchase code from Envato Mark
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Fixed: valid & invalid result check issue fixed
 
 = 1.0.2 =
 * Fixed: issue with date in moment js fixed
