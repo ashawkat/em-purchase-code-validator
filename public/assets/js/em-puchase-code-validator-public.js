@@ -15,10 +15,44 @@ new Vue({
     },
     methods: {
         getValidity : function ( supportDate ) {
-            if ( moment(supportDate).isSame(moment(), 'day') ) {
+            var splitedDate = supportDate.split(' ');
+
+            if ( splitedDate[0] == 'January' ) {
+                splitedDate[0] = 01;
+            } else if( splitedDate[0] == 'February' ) {
+                splitedDate[0] = 02;
+            } else if( splitedDate[0] == 'March' ) {
+                splitedDate[0] = 03;
+            } else if( splitedDate[0] == 'April' ) {
+                splitedDate[0] = 04;
+            } else if( splitedDate[0] == 'May' ) {
+                splitedDate[0] = 05;
+            } else if( splitedDate[0] == 'June' ) {
+                splitedDate[0] = 06;
+            } else if( splitedDate[0] == 'July' ) {
+                splitedDate[0] = 07;
+            } else if( splitedDate[0] == 'August' ) {
+                splitedDate[0] = 08;
+            } else if( splitedDate[0] == 'September' ) {
+                splitedDate[0] = 09;
+            } else if( splitedDate[0] == 'October' ) {
+                splitedDate[0] = 10;
+            } else if( splitedDate[0] == 'November' ) {
+                splitedDate[0] = 11;
+            } else if( splitedDate[0] == 'December' ) {
+                splitedDate[0] = 12;
+            }
+
+            var formatedDate = splitedDate[2] + '-' +  splitedDate[0] + '-' + splitedDate[1].slice(0,-2);
+            console.log( formatedDate );
+            var date = moment(formatedDate);
+            var now = moment();
+            if ( now > date ) {
+                this.validClass = false;
                 this.invalidClass = true;
                 return 'Invalid for support';
             } else {
+                this.invalidClass = false;
                 this.validClass = true;
                 return 'Valid for support';
             }

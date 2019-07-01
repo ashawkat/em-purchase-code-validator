@@ -16,7 +16,7 @@
  * Plugin Name:       EM Purchase Code Validator
  * Plugin URI:        https://wordpress.org
  * Description:       This is a simple plugin to validate your customer purchase code from Envato Market.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            CodeHeaven
  * Author URI:        https://codeheavenbd.com
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EM_PURCHASE_CODE_VALIDATOR', '1.0.2' );
+define( 'EM_PURCHASE_CODE_VALIDATOR', '1.0.3' );
 
 /**
  * The code that runs during plugin activation.
