@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors:      CodeHeaven  
 Plugin Name:       EM Purchase Code Validator  
-Plugin URI:        https://wordpress.org/  
+Plugin URI:        https://wordpress.org/plugins/em-purchase-code-validator/
 Tags:              purchase code verify, envato market, envato verify, purchase code verifier, envato market verify, themeforest purchase code verify  
 Author URI:        https://codeheavenbd.com  
 Author:            CodeHeaven  
