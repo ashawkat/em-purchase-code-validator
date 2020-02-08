@@ -118,14 +118,15 @@ h1.tr-dash-heading {
 .settings-section input[type="text"] {
     width: 330px;
 }
-iframe {
+.tr-dash-row .tr-dash-content iframe {
     float: right;
 }
-pre {
+.tr-dash-row .tr-dash-content pre {
     background-color: #ddd;
 	padding: 10px;
 	text-align: center;
 }
+
 
 /* Notice for the  theme*/
 .notice.is-dismissible.tr-plugin-notice {
