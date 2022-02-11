@@ -8,7 +8,7 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://codeheavenbd.com
+ * @link              https://codeheaven.ca
  * @since             1.0.0
  * @package           Em_Puchase_Code_Validator
  *
@@ -16,9 +16,9 @@
  * Plugin Name:       EM Purchase Code Validator
  * Plugin URI:        https://wordpress.org
  * Description:       This is a simple plugin to validate your customer purchase code from Envato Market.
- * Version:           1.0.4
+ * Version:           1.1
  * Author:            CodeHeaven
- * Author URI:        https://codeheavenbd.com
+ * Author URI:        https://codeheaven.ca
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       em-puchase-code-validator
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EM_PURCHASE_CODE_VALIDATOR', '1.0.4' );
+const EM_PURCHASE_CODE_VALIDATOR = '1.1';
 
 /**
  * The code that runs during plugin activation.

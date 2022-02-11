@@ -1,14 +1,14 @@
 === Plugin Name ===
 Contributors:      CodeHeaven, adnanshawkat
 Plugin Name:       EM Purchase Code Validator
-Plugin URI:        https://wordpress.org/plugins/em-purchase-code-validator/
+Plugin URI:        https://wordpress.org/
 Tags:              purchase code verify, envato market, envato verify, purchase code verifier, envato market verify, themeforest purchase code verify
 Author URI:        https://codeheavenbd.com
 Author:            CodeHeaven
-Requires at least: 4.9
-Tested up to:      5.3
-Stable tag:        1.0.4
-Version:           1.0.4
+Requires at least: 5.0
+Tested up to:      5.9
+Stable tag:        1.1
+Version:           1.1
 
 This is a simple plugin to validate your customer purchase code from Envato Market.
 
@@ -33,6 +33,13 @@ This is a simple plugin to validate your customer purchase code from Envato Mark
 
 
 == Changelog ==
+
+= 1.1 =
+* Updated: Vue, Axios & Moment library update
+* Fixed: Vulnerability within moment usage fixed
+
+= 1.0.5 =
+* Fixed: PHP error issue on settings page
 
 = 1.0.4 =
 * Fixed: minor css issue fixed on admin panel

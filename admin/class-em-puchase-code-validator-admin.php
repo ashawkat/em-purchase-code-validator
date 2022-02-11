@@ -61,7 +61,30 @@ class Em_Puchase_Code_Validator_Admin {
 		
 		add_action( 'admin_menu', array( $this, 'em_admin_sub_menu' ));
 		add_action( 'admin_init', array( $this, 'em_settings_init' ) );
-		add_filter( 'plugin_action_links', array( $this, 'em_add_plugin_action_links' ), 10, 2 );
+		add_filter( 'plugin_action_links', array($this,'em_add_plugin_action_links'), 10, 5 );
+	}
+
+	/**
+	 * Add plugin action menu
+	 */
+	public function em_add_plugin_action_links( $actions, $plugin_file ) {
+
+		if ( 'em-purchase-code-validator/em-puchase-code-validator.php' === $plugin_file ) {
+
+			$settings = array(
+				sprintf( '<a href="%s">%s</a>',
+					admin_url( 'tools.php?page=em_settings_page' ),
+					__( 'Settings', 'em-puchase-code-validator' ) ),
+			);
+			$support_link = [
+				'support' => '<a href="https://wordpress.org/support/plugin/em-purchase-code-validator/" target="_blank">' . __( 'Support', 'em-puchase-code-validator' ) . '</a>'
+			];
+				
+			$actions = array_merge( $support_link, $actions );
+			$actions = array_merge( $settings, $actions );
+		}
+			
+		return $actions;
 	}
 
 	/**
@@ -103,8 +126,10 @@ class Em_Puchase_Code_Validator_Admin {
 	public function em_text_field_0_render(  ) { 
 	
 		$options = get_option( 'em_settings' );
+		if ( isset( $options ) && $options != '' ) $value = $options['em_text_field_0'];
+		else $value = '';
 		?>
-		<input type='text' name='em_settings[em_text_field_0]' value='<?php echo $options['em_text_field_0']; ?>'>
+		<input type='text' name='em_settings[em_text_field_0]' value='<?php echo $value; ?>'>
 		<?php
 	
 	}
@@ -122,22 +147,6 @@ class Em_Puchase_Code_Validator_Admin {
 		?>
 		
 		<?php
-	}
-
-	/**
-	 * Add plugin action menu
-	 */
-	public function em_add_plugin_action_links( $links, $file ) {
-
-		if ( $file == 'em-puchase-code-validator/em-puchase-code-validator.php' ) {
-			$new_links = array(
-				sprintf( '<a href="%s">%s</a>', admin_url( 'tools.php?page=em_settings_page' ), __( 'Settings', 'em-puchase-code-validator' ) ),
-			);
-
-			return array_merge( $new_links, $links );
-		}
-
-		return $links;
 	}
 
 	/**

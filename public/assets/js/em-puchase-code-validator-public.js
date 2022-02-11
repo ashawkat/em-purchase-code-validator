@@ -2,7 +2,7 @@ new Vue({
     el: '#em-form',
     data: {
         purchaseCode: '',
-        authToken: envato_token.authToken,
+        authToken: js_response.authToken,
         responseData: '',
         responseDataEnabler: false,
         responseMessage: '',
@@ -15,35 +15,35 @@ new Vue({
     },
     methods: {
         getValidity : function ( supportDate ) {
-            var splitedDate = supportDate.split(' ');
+            let splitedDate = supportDate.split(' ');
 
             if ( splitedDate[0] == 'January' ) {
-                splitedDate[0] = 01;
+                splitedDate[0] = '01';
             } else if( splitedDate[0] == 'February' ) {
-                splitedDate[0] = 02;
+                splitedDate[0] = '02';
             } else if( splitedDate[0] == 'March' ) {
-                splitedDate[0] = 03;
+                splitedDate[0] = '03';
             } else if( splitedDate[0] == 'April' ) {
-                splitedDate[0] = 04;
+                splitedDate[0] = '04';
             } else if( splitedDate[0] == 'May' ) {
-                splitedDate[0] = 05;
+                splitedDate[0] = '05';
             } else if( splitedDate[0] == 'June' ) {
-                splitedDate[0] = 06;
+                splitedDate[0] = '06';
             } else if( splitedDate[0] == 'July' ) {
-                splitedDate[0] = 07;
+                splitedDate[0] = '07';
             } else if( splitedDate[0] == 'August' ) {
-                splitedDate[0] = 08;
+                splitedDate[0] = '08';
             } else if( splitedDate[0] == 'September' ) {
-                splitedDate[0] = 09;
+                splitedDate[0] = '09';
             } else if( splitedDate[0] == 'October' ) {
-                splitedDate[0] = 10;
+                splitedDate[0] = '10';
             } else if( splitedDate[0] == 'November' ) {
-                splitedDate[0] = 11;
+                splitedDate[0] = '11';
             } else if( splitedDate[0] == 'December' ) {
-                splitedDate[0] = 12;
+                splitedDate[0] = '12';
             }
 
-            var formatedDate = splitedDate[2] + '-' +  splitedDate[0] + '-' + splitedDate[1].slice(0,-2);
+            let formatedDate = splitedDate[2] + '-' +  splitedDate[0] + '-' + splitedDate[1].slice(0,-2);
             console.log( formatedDate );
             var date = moment(formatedDate);
             var now = moment();
@@ -82,28 +82,26 @@ new Vue({
                             this.responseMessageEnabler = true;
                             this.responseMessageSuccess = true;
                             this.responseMessageError = false;
-                            this.responseMessage = 'Your purchase code is valid & result is listed above!';
+                            this.responseMessage = js_response.responseOne;
                         } else {
                             this.responseDataEnabler = false;
                             this.responseMessageEnabler = true;
                             this.responseMessageError = true;
                             this.responseMessageSuccess = false;
-                            this.responseMessage = 'Your purchase code is not valid or having problem with connecting with the market api. Please check again!';
+                            this.responseMessage = js_response.responseTwo;
                         } 
                     })
-                    
-                                        
                 } else {
                     this.responseMessageEnabler = true;
                     this.responseMessageError = true;
                     this.responseMessageSuccess = false;
-                    this.responseMessage = 'Invalid Code!';
+                    this.responseMessage = js_response.responseThree;
                 }
             } else {
                 this.responseMessageEnabler = true;
                 this.responseMessageError = true;
                 this.responseMessageSuccess = false;
-                this.responseMessage = 'Please go to the settings page & set your token to see validator working!';
+                this.responseMessage = js_response.responseFour;
             }
         },
     }

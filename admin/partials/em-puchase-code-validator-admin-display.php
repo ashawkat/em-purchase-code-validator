@@ -14,7 +14,8 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=400028300769066&autoLogAppEvents=1" nonce="nmFqcYPi"></script>
 <div class="wrap about-wrap tr-help">
     <div class="tr-dash-row">
         <div class="header">
@@ -38,13 +39,15 @@
                         do_settings_sections( 'em_page' );
                         submit_button();
                         ?>
-
-                        <?php _e( '<p>To Show the form of purchase code use this shortcode :</p><pre>[em_purchase_code_validator]</pre>', 'em-puchase-code-validator' ); ?>
+	                    <p>
+                            <?php _e( 'To Show the form of purchase code use this shortcode :', 'em-puchase-code-validator' ); ?>
+	                    </p>
+	                    <pre>[em_purchase_code_validator]</pre>
                     </form>
                 </div>
             </div>
             <div class="tr-dash-col-2">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcodeheavenbd%2F&tabs=timeline&width=500&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=400028300769066" width="500" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+	            <div class="fb-page" data-href="https://www.facebook.com/codeheavenbd" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/codeheavenbd" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codeheavenbd">Code Heaven</a></blockquote></div>
             </div>            
 		</div>
 	</div> 

@@ -84,10 +84,14 @@ class Em_Puchase_Code_Validator_Public {
 		wp_enqueue_script( 'em-vue-moment-tz', plugin_dir_url( __FILE__ ) . 'assets/js/moment-timezone.min.js', '', $this->version, false );
 		wp_enqueue_script( 'em-axios-lib', plugin_dir_url( __FILE__ ) . 'assets/js/axios.min.js', '', $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'assets/js/em-puchase-code-validator-public.js', '', $this->version, true );
-		$authToken = array(
-			'authToken' => get_option('em_settings')['em_text_field_0'],
-		);
-		wp_localize_script( $this->plugin_name, 'envato_token', $authToken );
+
+		wp_localize_script( $this->plugin_name, 'js_response', [
+            'authToken'     => get_option('em_settings')['em_text_field_0'],
+            'responseOne'   => __( 'Your purchase code is valid & result is listed above!', 'em-puchase-code-validator' ),
+            'responseTwo'   => __( 'Your purchase code is not valid or having problem with connecting with the market api. Please check again!', 'em-puchase-code-validator' ),
+            'responseThree' => __( 'Invalid Code!', 'em-puchase-code-validator' ),
+            'responseFour'  => __( 'Please go to the settings page & set your token to see validator working!', 'em-puchase-code-validator' ),
+        ] );
 	}
 
 }
